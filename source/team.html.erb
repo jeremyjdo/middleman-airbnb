@@ -5,6 +5,7 @@
       <li>
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{gh_username}", class: "img-circle img-small" %>
         <h3><%= gh_username.capitalize %></h3>
+        <%= link_to "Meet this buddy", "https://github.com/#{gh_username}", class: "btn btn-primary" %>
       </li>
     <% end %>
   </ul>

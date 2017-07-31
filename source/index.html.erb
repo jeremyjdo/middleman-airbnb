@@ -13,17 +13,19 @@ title: Le Wagon - Middleman
 <div class="wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('background.jpg');">
-          <div class="card-category">Popular</div>
-          <div class="card-description">
-            <h2>Some stuff</h2>
-            <p>Very cool stuff, useful and smart</p>
+        <% %w(berlin shanghai paris tokyo rio).each do |city| %>
+         <div class="col-xs-12 col-md-6">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/<%= city %>');">
+            <div class="card-category"><%= city.capitalize %></div>
+            <div class="card-description">
+              <h2>best city</h2>
+              <p>You have to go</p>
+            </div>
+            <img class="card-user" src="user.jpg">
+            <a class="card-link" href="#" ></a>
           </div>
-          <img class="card-user" src="user.jpg">
-          <a class="card-link" href="#" ></a>
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
